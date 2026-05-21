@@ -119,7 +119,9 @@ const perfilScore = Math.round(
     if (!pdfRef.current) return;
 
     if (!html2pdf) {
-      html2pdf = (await import("html2pdf.js")).default;
+html2pdf = (
+  await import("html2pdf.js/dist/html2pdf.min.js")
+).default;
     }
 
     const options = {

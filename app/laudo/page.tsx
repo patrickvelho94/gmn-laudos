@@ -1,9 +1,9 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function LaudoPage() {
-
+function LaudoContent() {
   const searchParams = useSearchParams();
 
   const empresa =
@@ -629,5 +629,12 @@ else if (secaoAtual.includes("PRIORIDADES")) {
       </div>
 
     </main>
+  );
+}
+export default function LaudoPage() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <LaudoContent />
+    </Suspense>
   );
 }

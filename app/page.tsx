@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 
+// @ts-ignore
 let html2pdf: any;
 
 export default function Home() {

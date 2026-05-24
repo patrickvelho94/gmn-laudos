@@ -63,7 +63,7 @@ const perfilScore =
   return (
     <main className="print-container bg-[#111111] min-h-screen p-10">
 
-      <div className="w-full max-w-[1400px] mx-auto px-2 md:px-6">
+      <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
         {/* BOTÃO */}
         <div className="flex justify-end mb-6 print:hidden">
@@ -123,7 +123,7 @@ const perfilScore =
           {/* HERO SCORE */}
           <div className="pdf-section mb-16">
 
-            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-5 md:p-10">
+            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-1 md:p-8 w-full">
 
               <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-10">
 
@@ -348,7 +348,7 @@ const perfilScore =
     Posicionamento Competitivo
   </h2>
 
-  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-3 md:p-8 w-full">
+  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-1 md:p-8 w-full">
 
     <div className="space-y-8">
 
@@ -551,7 +551,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 {/* CTA FINAL */}
 <div className="pdf-section mt-20">
 
-  <div className="bg-black text-white rounded-3xl p-5 md:p-10 w-full">
+  <div className="bg-black text-white rounded-3xl p-2 md:p-10 w-full">
 
      <div className="w-full mx-auto px-1 md:px-6">
 
@@ -559,7 +559,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
         Oportunidade Estratégica
       </p>
 
-     <h2 className="text-[34px] md:text-5xl font-black leading-[1.1] mb-6 break-words">
+     <h2 className="text-[22px] md:text-5xl font-black leading-tight mb-6 break-words">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 

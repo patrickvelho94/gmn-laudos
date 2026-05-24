@@ -551,19 +551,19 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 {/* CTA FINAL */}
 <div className="pdf-section mt-20">
 
-  <div className="bg-black text-white rounded-3xl p-10">
+  <div className="bg-black text-white rounded-3xl p-6 md:p-10">
 
-    <div className="max-w-[700px]">
+    <div className="w-full max-w-[700px]">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
         Oportunidade Estratégica
       </p>
 
-      <h2 className="text-5xl font-black leading-tight mb-6">
+      <h2 className="text-3xl md:text-5xl font-black leading-tight mb-6">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 
-      <p className="text-zinc-300 text-xl leading-9 mb-10">
+      <p className="text-zinc-300 text-base md:text-xl leading-7 md:leading-9 mb-10">
         Com uma estratégia correta de posicionamento local,
         otimização do Google Meu Negócio e fortalecimento de autoridade,
         sua empresa pode aumentar significativamente sua visibilidade,
@@ -573,7 +573,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
       <a
         href="https://wa.me/5551994127283"
         target="_blank"
-        className="inline-flex items-center justify-center bg-[#22c55e] text-black px-8 py-5 rounded-2xl font-black text-lg hover:scale-[1.03] transition-all"
+        className="inline-flex items-center justify-center bg-[#22c55e] text-black px-6 md:px-8 py-4 md:py-5 rounded-2xl font-black text-base md:text-lg hover:scale-[1.03] transition-all"
       >
         Solicitar Plano de Otimização
       </a>

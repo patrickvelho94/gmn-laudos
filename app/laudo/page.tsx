@@ -63,7 +63,7 @@ const perfilScore =
   return (
     <main className="print-container bg-[#111111] min-h-screen p-10">
 
-      <div className="w-full max-w-[1100px] mx-auto px-3 md:px-6">
+      <div className="w-full max-w-[1280px] mx-auto px-2 md:px-6">
 
         {/* BOTÃO */}
         <div className="flex justify-end mb-6 print:hidden">
@@ -214,16 +214,16 @@ const perfilScore =
               </div>
 
               {/* MÉTRICAS */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-12">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 mt-12">
 
   {/* SEO */}
-  <div className="bg-white rounded-2xl p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       SEO LOCAL
     </p>
 
-    <h3 className="text-2xl md:text-3xl font-black mb-4">
+    <h3 className="text-3xl md:text-3xl font-black mb-4">
       {seoScore}%
     </h3>
 
@@ -247,7 +247,7 @@ const perfilScore =
   </div>
 
   {/* AVALIAÇÕES */}
-  <div className="bg-white rounded-2xl p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       AVALIAÇÕES
@@ -277,7 +277,7 @@ const perfilScore =
   </div>
 
   {/* ENGAJAMENTO */}
-  <div className="bg-white rounded-2xl p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       ENGAJAMENTO
@@ -307,7 +307,7 @@ const perfilScore =
   </div>
 
   {/* PERFIL */}
-  <div className="bg-white rounded-2xl p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       PERFIL
@@ -348,7 +348,7 @@ const perfilScore =
     Posicionamento Competitivo
   </h2>
 
-  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-8">
+  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-5 md:p-8 w-full">
 
     <div className="space-y-8">
 
@@ -357,7 +357,7 @@ const perfilScore =
 
         <div className="flex items-center justify-between mb-3">
 
-          <p className="font-bold text-lg">
+          <p className="font-bold text-base md:text-lg">
             Sua Empresa
           </p>
 
@@ -391,7 +391,7 @@ const perfilScore =
 
         <div className="flex items-center justify-between mb-3">
 
-          <p className="font-bold text-lg">
+          <p className="font-bold text-base md:text-lg">
             Média dos Concorrentes Locais
           </p>
 
@@ -553,7 +553,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 
   <div className="bg-black text-white rounded-3xl p-6 md:p-10">
 
-    <div className="w-full max-w-[700px]">
+     <div className="w-full max-w-[1000px]">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
         Oportunidade Estratégica

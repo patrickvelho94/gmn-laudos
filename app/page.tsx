@@ -249,8 +249,7 @@ localStorage.setItem(
 
   return (
     <main className="min-h-screen bg-black text-white px-6 py-14">
-      <div className="max-w-7xl mx-auto">
-
+<div className="w-full max-w-7xl mx-auto px-4 md:px-8">
         {/* HERO */}
         <section className="mb-14">
 
@@ -258,11 +257,10 @@ localStorage.setItem(
             Sistema Inteligente de Auditoria GMN
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black leading-tight max-w-5xl mb-6">
-            Gere laudos profissionais para Google Meu Negócio
+<h1 className="text-4xl md:text-7xl font-black leading-tight break-words max-w-5xl mb-6">            Gere laudos profissionais para Google Meu Negócio
           </h1>
 
-          <p className="text-[#a1a1aa] text-xl max-w-3xl leading-relaxed">
+          <p className="text-[#a1a1aa] text-base md:text-xl max-w-3xl leading-relaxed">
             Analise perfis, identifique problemas estratégicos e aumente seus fechamentos
           </p>
 
@@ -271,7 +269,7 @@ localStorage.setItem(
         <section className="grid grid-cols-1 xl:grid-cols-2 gap-8">
 
           {/* FORM */}
-          <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-8">
+          <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 md:p-8">
 
             <h2 className="text-3xl font-bold mb-8">
               Auditoria do Perfil

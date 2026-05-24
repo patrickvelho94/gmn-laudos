@@ -61,7 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-    <main className="print-container bg-[#111111] min-h-screen p-10">
+    <main className="print-container bg-[#111111] min-h-screen p-2 md:p-10">
 
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
@@ -78,7 +78,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-        <div className="bg-white text-black rounded-3xl p-14 shadow-2xl">
+        <div className="bg-white text-black rounded-[32px] p-4 md:p-14 shadow-2xl w-full overflow-hidden">
 
           {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-10 mb-12">
@@ -123,7 +123,7 @@ const perfilScore =
           {/* HERO SCORE */}
           <div className="pdf-section mb-16">
 
-            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-1 md:p-8 w-full">
+            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-4 md:p-8 w-full overflow-hidden">
 
               <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-10">
 
@@ -148,7 +148,7 @@ const perfilScore =
 
                   </div>
 
-                  <p className="text-[#64748b] mt-6 text-base md:text-lg leading-7 md:leading-8 w-full max-w-[500px] break-words">
+                  <p className="text-[#64748b] mt-6 text-[15px] md:text-lg leading-7 md:leading-8 w-full max-w-full md:max-w-[500px] break-words">
                     Esta auditoria identifica os principais pontos estratégicos
                     do perfil da empresa no Google Meu Negócio, destacando
                     oportunidades de crescimento, autoridade local e melhorias
@@ -158,7 +158,7 @@ const perfilScore =
                 </div>
 
                 {/* DIREITA */}
-                <div className="relative w-[160px] h-[160px] md:w-[220px] md:h-[220px] flex items-center justify-center">
+                <div className="relative w-[130px] h-[130px] md:w-[220px] md:h-[220px] flex items-center justify-center shrink-0">
 
                   <svg
                     className="w-full h-full rotate-[-90deg]"
@@ -214,10 +214,10 @@ const perfilScore =
               </div>
 
               {/* MÉTRICAS */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-12">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 mt-10">
 
   {/* SEO */}
-  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-3 md:p-5 border border-[#e2e8f0] min-w-0">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       SEO LOCAL
@@ -247,7 +247,7 @@ const perfilScore =
   </div>
 
   {/* AVALIAÇÕES */}
-  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-3 md:p-5 border border-[#e2e8f0] min-w-0">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       AVALIAÇÕES
@@ -277,7 +277,7 @@ const perfilScore =
   </div>
 
   {/* ENGAJAMENTO */}
-  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-3 md:p-5 border border-[#e2e8f0] min-w-0">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       ENGAJAMENTO
@@ -307,13 +307,13 @@ const perfilScore =
   </div>
 
   {/* PERFIL */}
-  <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">
+  <div className="bg-white rounded-2xl p-3 md:p-5 border border-[#e2e8f0] min-w-0">
 
     <p className="text-[#64748b] text-sm font-semibold mb-3">
       PERFIL
     </p>
 
-    <h3 className="text-3xl font-black mb-4">
+    <h3 className="text-2xl md:text-3xl font-black mb-3">
       {perfilScore}%
     </h3>
 
@@ -348,7 +348,7 @@ const perfilScore =
     Posicionamento Competitivo
   </h2>
 
-  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-1 md:p-8 w-full">
+  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-4 md:p-8 w-full overflow-hidden">
 
     <div className="space-y-8">
 
@@ -415,7 +415,7 @@ const perfilScore =
       </div>
 
       {/* DIFERENÇA */}
-      <div className="bg-white rounded-2xl border border-[#e2e8f0] p-6">
+      <div className="bg-white rounded-2xl border border-[#e2e8f0] p-4 md:p-6 w-full overflow-hidden">
 
         <p className="text-sm uppercase tracking-widest text-zinc-500 mb-3">
           Diferença Competitiva
@@ -425,7 +425,7 @@ const perfilScore =
           {score - 78}
         </h3>
 
-        <p className="text-zinc-600 leading-8 text-lg">
+        <p className="text-zinc-600 leading-7 text-[15px] md:text-lg break-words">
           O perfil apresenta uma diferença competitiva em relação aos
           concorrentes locais da mesma categoria, impactando potencial
           de visibilidade, autoridade local e geração de clientes no Google.
@@ -551,19 +551,19 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 {/* CTA FINAL */}
 <div className="pdf-section mt-20">
 
-  <div className="bg-black text-white rounded-3xl p-2 md:p-10 w-full">
+  <div className="bg-black text-white rounded-3xl p-5 md:p-10 w-full overflow-hidden">
 
-     <div className="w-full mx-auto px-1 md:px-6">
+     <div className="w-full max-w-full mx-auto px-1 md:px-6">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
         Oportunidade Estratégica
       </p>
 
-     <h2 className="text-[22px] md:text-5xl font-black leading-tight mb-6 break-words">
+     <h2 className="text-[18px] md:text-5xl font-black leading-[1.2] mb-5 break-words max-w-full">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 
-      <p className="text-zinc-300 text-base md:text-xl leading-7 md:leading-9 mb-10">
+      <p className="text-zinc-300 text-[15px] md:text-xl leading-7 md:leading-9 mb-8 break-words">
         Com uma estratégia correta de posicionamento local,
         otimização do Google Meu Negócio e fortalecimento de autoridade,
         sua empresa pode aumentar significativamente sua visibilidade,

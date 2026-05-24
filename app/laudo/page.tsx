@@ -63,7 +63,7 @@ const perfilScore =
   return (
     <main className="print-container bg-[#111111] min-h-screen p-10">
 
-      <div className="w-full max-w-[1280px] mx-auto px-2 md:px-6">
+      <div className="w-full max-w-[1400px] mx-auto px-2 md:px-6">
 
         {/* BOTÃO */}
         <div className="flex justify-end mb-6 print:hidden">
@@ -348,7 +348,7 @@ const perfilScore =
     Posicionamento Competitivo
   </h2>
 
-  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-5 md:p-8 w-full">
+  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-3 md:p-8 w-full">
 
     <div className="space-y-8">
 

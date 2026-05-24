@@ -63,7 +63,7 @@ const perfilScore =
   return (
     <main className="print-container bg-[#111111] min-h-screen p-10">
 
-      <div className="max-w-[950px] mx-auto">
+      <div className="w-full max-w-[1100px] mx-auto px-3 md:px-6">
 
         {/* BOTÃO */}
         <div className="flex justify-end mb-6 print:hidden">

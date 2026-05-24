@@ -553,7 +553,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 
   <div className="bg-black text-white rounded-3xl p-6 md:p-10">
 
-     <div className="w-full max-w-[1000px]">
+     <div className="w-full max-w-[1200px] mx-auto px-3 md:px-6">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
         Oportunidade Estratégica

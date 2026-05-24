@@ -551,15 +551,15 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 {/* CTA FINAL */}
 <div className="pdf-section mt-20">
 
-  <div className="bg-black text-white rounded-3xl p-6 md:p-10">
+  <div className="bg-black text-white rounded-3xl p-5 md:p-10 w-full">
 
-     <div className="w-full max-w-[1200px] mx-auto px-3 md:px-6">
+     <div className="w-full mx-auto px-1 md:px-6">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
         Oportunidade Estratégica
       </p>
 
-      <h2 className="text-3xl md:text-5xl font-black leading-tight mb-6">
+     <h2 className="text-[34px] md:text-5xl font-black leading-[1.1] mb-6 break-words">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 

@@ -123,7 +123,7 @@ const perfilScore =
           {/* HERO SCORE */}
           <div className="pdf-section mb-16">
 
-            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-10">
+            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-5 md:p-10">
 
               <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-10">
 
@@ -214,7 +214,7 @@ const perfilScore =
               </div>
 
               {/* MÉTRICAS */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 mt-12">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-12">
 
   {/* SEO */}
   <div className="bg-white rounded-2xl p-4 md:p-5 border border-[#e2e8f0]">

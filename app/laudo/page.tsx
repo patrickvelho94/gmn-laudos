@@ -87,7 +87,7 @@ const perfilScore =
     AUDITORIA GOOGLE MEU NEGÓCIO
   </div>
 
-  <div className="flex items-center gap-5 mb-8">
+  <div className="flex flex-col md:flex-row items-center md:items-start gap-5 mb-8 text-center md:text-left">
 
     <img
       src="/patrick.png"
@@ -101,7 +101,7 @@ const perfilScore =
         Patrick Gestor
       </h2>
 
-      <p className="text-zinc-600 text-lg leading-7">
+      <p className="text-zinc-600 text-base md:text-lg leading-7 break-words">
         Especialista em Google Meu Negócio,
         SEO Local e Posicionamento Estratégico
       </p>
@@ -110,7 +110,7 @@ const perfilScore =
 
   </div>
 
-  <h1 className="text-5xl font-black mb-4">
+  <h1 className="text-3xl md:text-5xl font-black mb-4 break-words">
     {empresa}
   </h1>
 
@@ -125,7 +125,7 @@ const perfilScore =
 
             <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-10">
 
-              <div className="flex items-center justify-between gap-10 flex-wrap">
+              <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-10">
 
                 {/* ESQUERDA */}
                 <div>
@@ -148,7 +148,7 @@ const perfilScore =
 
                   </div>
 
-                  <p className="text-[#64748b] mt-6 text-lg leading-8 max-w-[500px]">
+                  <p className="text-[#64748b] mt-6 text-base md:text-lg leading-7 md:leading-8 w-full max-w-[500px] break-words">
                     Esta auditoria identifica os principais pontos estratégicos
                     do perfil da empresa no Google Meu Negócio, destacando
                     oportunidades de crescimento, autoridade local e melhorias
@@ -158,7 +158,7 @@ const perfilScore =
                 </div>
 
                 {/* DIREITA */}
-                <div className="relative w-[220px] h-[220px] flex items-center justify-center">
+                <div className="relative w-[160px] h-[160px] md:w-[220px] md:h-[220px] flex items-center justify-center">
 
                   <svg
                     className="w-full h-full rotate-[-90deg]"
@@ -199,7 +199,7 @@ const perfilScore =
                   {/* TEXTO */}
                   <div className="absolute flex flex-col items-center justify-center">
 
-                    <span className="text-6xl font-black">
+                    <span className="text-4xl md:text-6xl font-black">
                       {score}
                     </span>
 
@@ -223,7 +223,7 @@ const perfilScore =
       SEO LOCAL
     </p>
 
-    <h3 className="text-3xl font-black mb-4">
+    <h3 className="text-2xl md:text-3xl font-black mb-4">
       {seoScore}%
     </h3>
 

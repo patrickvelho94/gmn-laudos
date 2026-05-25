@@ -9,16 +9,22 @@ body {
 }
 
 @media print {
+  @page {
+  size: A4;
+  margin: 18mm;
+}
 
   body {
     background: white !important;
   }
 
   .print-container {
-    width: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: white;
+  width: 100%;
+  max-width: 1200px;
+  padding: 24px !important;
+  margin: 0 auto !important;
+  background: white;
+
   }
 
   .pdf-section {

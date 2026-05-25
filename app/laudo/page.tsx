@@ -549,9 +549,9 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 </div>
 
 {/* CTA FINAL */}
-<div className="pdf-section mt-20">
+<div className="pdf-section mt-20 print-break-inside-avoid">
 
-  <div className="bg-black text-white rounded-3xl p-5 md:p-10 w-full overflow-hidden">
+  <div className="bg-black text-white rounded-3xl p-5 md:p-10 w-full overflow-hidden break-inside-avoid">
 
      <div className="w-full max-w-full mx-auto px-1 md:px-6">
 
@@ -585,7 +585,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 </div>
 
 {/* FOOTER */}
-<div className="pdf-section mt-20 pt-10 border-t border-zinc-300">
+<div className="pdf-section mt-12 pt-8 border-t border-zinc-300 break-inside-avoid">
 
   <div className="flex items-center justify-between flex-wrap gap-10">
 

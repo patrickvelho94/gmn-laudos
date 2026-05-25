@@ -6,7 +6,9 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-}@media print {
+}
+
+@media print {
 
   body {
     background: white !important;
@@ -14,35 +16,15 @@ body {
 
   .print-container {
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     background: white;
   }
 
   .pdf-section {
     break-inside: avoid;
     page-break-inside: avoid;
-    margin-bottom: 40px;
-  }
-
-  h1,
-  h2,
-  h3,
-  p,
-  li {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  button {
-    display: none !important;
-  }
-
-}
-@media print {
-
-  body {
-    background: white !important;
+    margin-bottom: 48px;
   }
 
   .print-break-inside-avoid {
@@ -52,6 +34,22 @@ body {
 
   .print-page-break {
     page-break-before: always;
+    break-before: page;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  button {
+    display: none !important;
   }
 
 }

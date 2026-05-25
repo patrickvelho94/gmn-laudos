@@ -61,7 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-    <main className="print-container bg-[#111111] min-h-screen p-2 md:p-10">
+    <main className="print-container bg-[#111111] min-h-screen p-2 md:p-10 print:scale-[1.12] print:origin-top">
 
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
@@ -78,8 +78,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-        <div className="bg-white text-black rounded-[32px] p-4 md:p-14 shadow-2xl w-full overflow-hidden">
-
+<div className="bg-white text-black rounded-[32px] p-6 md:p-14 shadow-2xl w-full overflow-hidden">
           {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-10 mb-12">
 

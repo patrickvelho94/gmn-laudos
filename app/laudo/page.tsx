@@ -78,7 +78,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-<div className="bg-white text-black text-[17px] md:text-[18px] rounded-[32px] p-6 md:p-14 shadow-2xl w-full overflow-hidden">
+<div className="bg-white text-black rounded-[32px] p-8 md:p-16 shadow-2xl w-full overflow-hidden text-[15px] md:text-[17px] leading-8">
           {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-10 mb-12">
 
@@ -91,16 +91,16 @@ const perfilScore =
     <img
       src="/patrick.png"
       alt="Patrick Gestor"
-      className="w-20 h-20 rounded-full object-cover border-4 border-[#22c55e]"
+      className="w-28 h-28 rounded-full"
     />
 
     <div>
 
-      <h2 className="text-2xl font-black">
+      <h2 className="text-3xl md:text-4xl font-black leading-tight">
         Patrick Gestor
       </h2>
 
-      <p className="text-zinc-600 text-base md:text-lg leading-7 break-words">
+      <p className="text-zinc-600 text-lg md:text-2xl leading-8 md:leading-10 break-words">
         Especialista em Google Meu Negócio,
         SEO Local e Posicionamento Estratégico
       </p>
@@ -109,7 +109,7 @@ const perfilScore =
 
   </div>
 
-  <h1 className="text-3xl md:text-5xl font-black mb-4 break-words">
+  <h1 className="text-4xl md:text-6xl font-black leading-tight mb-4 break-words">
     {empresa}
   </h1>
 
@@ -132,8 +132,8 @@ const perfilScore =
                   <p className="text-[#64748b] font-semibold uppercase tracking-widest mb-4">
                     Performance Geral
                   </p>
-
-                  <h2 className="text-6xl font-black mb-4">
+                   <h2 className="text-7xl md:text-8xl font-black leading-none mb-4">
+                  
                     {score}/100
                   </h2>
 
@@ -343,7 +343,7 @@ const perfilScore =
 {/* POSICIONAMENTO COMPETITIVO */}
 <div className="pdf-section mb-16">
 
-  <h2 className="text-3xl font-black mb-8">
+  <h2 className="text-4xl md:text-5xl font-black leading-tight mb-8">
     Posicionamento Competitivo
   </h2>
 
@@ -441,7 +441,7 @@ const perfilScore =
           {/* ANÁLISE IA */}
 <div className="pdf-section">
 
-  <h2 className="text-3xl font-black mb-8">
+  <h2 className="text-4xl md:text-5xl font-black leading-tight mb-8">
     Análise Estratégica
   </h2>
 
@@ -557,11 +557,11 @@ else if (secaoAtual.includes("PRIORIDADES")) {
         Oportunidade Estratégica
       </p>
 
-     <h2 className="text-[18px] md:text-5xl font-black leading-[1.2] mb-5 break-words max-w-full">
+     <h2 className="text-[28px] md:text-6xl font-black leading-[1.1] mb-6 break-words max-w-[900px]">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 
-      <p className="text-zinc-300 text-[15px] md:text-xl leading-7 md:leading-9 mb-8 break-words">
+      <p className="text-zinc-300 text-[17px] md:text-2xl leading-8 md:leading-10 mb-10 break-words max-w-[900px]">
         Com uma estratégia correta de posicionamento local,
         otimização do Google Meu Negócio e fortalecimento de autoridade,
         sua empresa pode aumentar significativamente sua visibilidade,
@@ -571,7 +571,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
       <a
         href="https://wa.me/5551994127283"
         target="_blank"
-        className="inline-flex items-center justify-center bg-gradient-to-r from-[#22c55e] to-[#16a34a] shadow-lg text-black px-6 md:px-8 py-4 md:py-5 rounded-2xl font-black text-base md:text-lg hover:scale-[1.03] transition-all"
+        className="inline-flex items-center justify-center bg-gradient-to-r from-[#22c55e] to-[#16a34a] shadow-lg text-black px-8 md:px-10 py-5 md:py-6 rounded-2xl font-black text-lg md:text-xl hover:scale-[1.03] transition-all"
       >
         Solicitar Plano de Otimização
       </a>

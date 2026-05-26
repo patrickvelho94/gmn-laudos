@@ -61,7 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-    <main className="print-container bg-[#111111] min-h-screen p-2 md:p-10 print:scale-[1.12] print:origin-top">
+    <main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 print:scale-[1.12] print:origin-top">
 
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
@@ -78,7 +78,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-<div className="bg-white text-black rounded-[32px] p-6 md:p-14 shadow-2xl w-full overflow-hidden">
+<div className="bg-white text-black text-[17px] md:text-[18px] rounded-[32px] p-6 md:p-14 shadow-2xl w-full overflow-hidden">
           {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-10 mb-12">
 
@@ -550,8 +550,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 {/* CTA FINAL */}
 <div className="pdf-section mt-20 print-break-inside-avoid">
 
-  <div className="bg-black text-white rounded-3xl p-5 md:p-10 w-full overflow-hidden break-inside-avoid">
-
+<div className="bg-gradient-to-br from-black to-zinc-900 text-white rounded-[40px] border border-zinc-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-5 md:p-10 w-full overflow-hidden break-inside-avoid">
      <div className="w-full max-w-full mx-auto px-1 md:px-6">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
@@ -572,7 +571,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
       <a
         href="https://wa.me/5551994127283"
         target="_blank"
-        className="inline-flex items-center justify-center bg-[#22c55e] text-black px-6 md:px-8 py-4 md:py-5 rounded-2xl font-black text-base md:text-lg hover:scale-[1.03] transition-all"
+        className="inline-flex items-center justify-center bg-gradient-to-r from-[#22c55e] to-[#16a34a] shadow-lg text-black px-6 md:px-8 py-4 md:py-5 rounded-2xl font-black text-base md:text-lg hover:scale-[1.03] transition-all"
       >
         Solicitar Plano de Otimização
       </a>

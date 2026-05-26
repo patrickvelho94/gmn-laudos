@@ -78,7 +78,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-<div className="bg-white text-black rounded-[32px] p-8 md:p-16 shadow-2xl w-full overflow-hidden text-[15px] md:text-[17px] leading-8">
+<div className="bg-white text-black rounded-[32px] p-10 md:p-16 shadow-2xl w-full overflow-hidden text-[17px] md:text-[19px] leading-9">
           {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-10 mb-12">
 
@@ -557,11 +557,11 @@ else if (secaoAtual.includes("PRIORIDADES")) {
         Oportunidade Estratégica
       </p>
 
-     <h2 className="text-[28px] md:text-6xl font-black leading-[1.1] mb-6 break-words max-w-[900px]">
+     <h2 className="text-[34px] md:text-7xl font-black leading-[1.1] mb-6 break-words max-w-[900px]">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 
-      <p className="text-zinc-300 text-[17px] md:text-2xl leading-8 md:leading-10 mb-10 break-words max-w-[900px]">
+      <p className="text-zinc-300 text-[19px] md:text-3xl leading-8 md:leading-10 mb-10 break-words max-w-[900px]">
         Com uma estratégia correta de posicionamento local,
         otimização do Google Meu Negócio e fortalecimento de autoridade,
         sua empresa pode aumentar significativamente sua visibilidade,

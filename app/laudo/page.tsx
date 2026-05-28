@@ -61,7 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:scale-[1.35] print:origin-top">
+<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:scale-[1.18] print:origin-top">
 
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
@@ -312,7 +312,7 @@ const perfilScore =
       PERFIL
     </p>
 
-    <h3 className="text-2xl md:text-3xl font-black mb-3">
+    <h3 className="text-3xl md:text-5xl font-black mb-3">
       {perfilScore}%
     </h3>
 
@@ -550,7 +550,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 {/* CTA FINAL */}
 <div className="pdf-section mt-8 print-break-inside-avoid">
 
-<div className="bg-gradient-to-br from-black to-zinc-900 text-white rounded-[40px] border border-zinc-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-5 md:p-10 w-full overflow-hidden break-inside-avoid">
+<div className="bg-gradient-to-br from-black to-zinc-900 text-white rounded-[40px] border border-zinc-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-8 md:p-12 w-full overflow-hidden break-inside-avoid">
      <div className="w-full max-w-full mx-auto px-1 md:px-6">
 
       <p className="text-[#22c55e] uppercase tracking-widest font-bold mb-4">
@@ -561,7 +561,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 
-      <p className="text-zinc-300 text-[19px] md:text-3xl leading-9 md:leading-[52px] mb-10 break-words max-w-[1100px]">
+      <p className="text-zinc-300 text-[22px] md:text-3xl leading-9 md:leading-[52px] mb-10 break-words max-w-[1100px]">
         Com uma estratégia correta de posicionamento local,
         otimização do Google Meu Negócio e fortalecimento de autoridade,
         sua empresa pode aumentar significativamente sua visibilidade,

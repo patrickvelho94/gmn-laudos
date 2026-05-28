@@ -61,7 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:px-6 print:scale-[1.15] print:origin-top">
+<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:px-6 print:scale-[1.10] print:origin-top">
 
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 

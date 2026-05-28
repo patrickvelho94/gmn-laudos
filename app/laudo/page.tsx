@@ -61,7 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10">
+<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:scale-[1.35] print:origin-top">
 
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
@@ -78,7 +78,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-<div className="bg-white text-black rounded-[32px] p-10 md:p-16 shadow-2xl w-full overflow-hidden text-[19px] md:text-[21px] leading-9">
+<div className="bg-white text-black rounded-[32px] p-10 md:p-16 mt-0 shadow-2xl w-full overflow-hidden text-[19px] md:text-[21px] leading-9">
           {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-6 mb-8">
 
@@ -548,7 +548,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 </div>
 
 {/* CTA FINAL */}
-<div className="pdf-section mt-20 print-break-inside-avoid">
+<div className="pdf-section mt-8 print-break-inside-avoid">
 
 <div className="bg-gradient-to-br from-black to-zinc-900 text-white rounded-[40px] border border-zinc-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-5 md:p-10 w-full overflow-hidden break-inside-avoid">
      <div className="w-full max-w-full mx-auto px-1 md:px-6">

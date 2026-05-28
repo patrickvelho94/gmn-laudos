@@ -78,9 +78,9 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-<div className="bg-white text-black rounded-[32px] p-10 md:p-16 shadow-2xl w-full overflow-hidden text-[17px] md:text-[19px] leading-9">
+<div className="bg-white text-black rounded-[32px] p-10 md:p-16 shadow-2xl w-full overflow-hidden text-[19px] md:text-[21px] leading-9">
           {/* HEADER */}
-<div className="pdf-section border-b border-zinc-300 pb-10 mb-12">
+<div className="pdf-section border-b border-zinc-300 pb-6 mb-8">
 
   <div className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
     AUDITORIA GOOGLE MEU NEGÓCIO
@@ -120,7 +120,7 @@ const perfilScore =
 </div>
 
           {/* HERO SCORE */}
-          <div className="pdf-section mb-16">
+          <div className="pdf-section mb-12">
 
             <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-3xl p-4 md:p-8 w-full overflow-hidden">
 
@@ -341,7 +341,7 @@ const perfilScore =
 </div>
 
 {/* POSICIONAMENTO COMPETITIVO */}
-<div className="pdf-section mb-16">
+<div className="pdf-section mb-12">
 
   <h2 className="text-4xl md:text-5xl font-black leading-tight mb-8">
     Posicionamento Competitivo
@@ -557,11 +557,11 @@ else if (secaoAtual.includes("PRIORIDADES")) {
         Oportunidade Estratégica
       </p>
 
-     <h2 className="text-[34px] md:text-7xl font-black leading-[1.1] mb-6 break-words max-w-[900px]">
+     <h2 className="text-[34px] md:text-7xl font-black leading-[1.1] mb-6 break-words max-w-[1100px]">
         Seu perfil possui oportunidades claras de crescimento no Google.
       </h2>
 
-      <p className="text-zinc-300 text-[19px] md:text-3xl leading-8 md:leading-10 mb-10 break-words max-w-[900px]">
+      <p className="text-zinc-300 text-[19px] md:text-3xl leading-9 md:leading-[52px] mb-10 break-words max-w-[1100px]">
         Com uma estratégia correta de posicionamento local,
         otimização do Google Meu Negócio e fortalecimento de autoridade,
         sua empresa pode aumentar significativamente sua visibilidade,

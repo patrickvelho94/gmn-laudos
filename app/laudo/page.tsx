@@ -61,8 +61,7 @@ const perfilScore =
   const progress = circumference - (score / 100) * circumference;
 
   return (
-<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:px-6 print:scale-[1.10] print:origin-top">
-
+<main className="print-container bg-[#111111] min-h-[75vh] p-2 md:p-10 pt-0 print:px-6">
       <div className="w-full max-w-none mx-auto px-0 md:px-6">
 
         {/* BOTÃO */}
@@ -78,8 +77,7 @@ const perfilScore =
         </div>
 
         {/* DOCUMENTO */}
-<div className="bg-white text-black rounded-[32px] p-10 md:p-16 mt-0 shadow-2xl w-full overflow-hidden text-[19px] md:text-[21px] leading-9">
-          {/* HEADER */}
+<div className="bg-white text-black rounded-[32px] p-10 md:p-16 mt-0 shadow-2xl w-full overflow-hidden">          {/* HEADER */}
 <div className="pdf-section border-b border-zinc-300 pb-6 mb-8">
 
   <div className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
@@ -100,8 +98,8 @@ const perfilScore =
         Patrick Gestor
       </h2>
 
-      <p className="text-zinc-600 text-lg md:text-2xl leading-8 md:leading-10 break-words">
-        Especialista em Google Meu Negócio,
+<p className="text-zinc-700 leading-7 text-base"> 
+         Especialista em Google Meu Negócio,
         SEO Local e Posicionamento Estratégico
       </p>
 

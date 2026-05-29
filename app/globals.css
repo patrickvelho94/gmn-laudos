@@ -40,9 +40,8 @@ body {
   }
 
   .pdf-section {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-bottom: 48px;
+  margin-bottom: 32px;
+
   }
 
   .print-break-inside-avoid {
@@ -55,16 +54,7 @@ body {
     break-before: page;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  li,
-  div {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
+ 
 
   button {
     display: none !important;

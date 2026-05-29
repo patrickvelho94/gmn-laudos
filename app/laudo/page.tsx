@@ -441,9 +441,7 @@ const perfilScore =
           {/* ANÁLISE IA */}
 <div className="pdf-section">
 
-  <h2 className="text-4xl md:text-5xl font-black leading-tight mb-8">
-    Análise Estratégica
-  </h2>
+
 
   <div className="space-y-6">
 
@@ -510,7 +508,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
   return (
     <div
       key={index}
-      className={`rounded-2xl p-5 border ${cor} print-break-inside-avoid`}
+      className={`rounded-2xl p-4 border ${cor} print-break-inside-avoid`}
     >
 
       <div className="flex items-center gap-3 mb-3">
@@ -525,7 +523,7 @@ else if (secaoAtual.includes("PRIORIDADES")) {
 
       </div>
 
-      <p className="leading-8">
+      <p className="leading-7">
         {texto}
       </p>
 

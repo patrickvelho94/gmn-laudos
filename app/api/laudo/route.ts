@@ -88,7 +88,7 @@ SEO LOCAL
 
 ESTRUTURA DO LAUDO:
 
-# RESUMO EXECUTIVO
+# ANALISE DETALHADA
 
 Faça um resumo estratégico e profissional da situação atual do perfil da empresa.
 

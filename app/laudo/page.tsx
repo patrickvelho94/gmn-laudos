@@ -451,7 +451,7 @@ const perfilScore =
         return (
           <h3
             key={index}
-            className="text-2xl font-black mt-10"
+            className="text-2xl font-black mt-10 mb-6"
           >
             {linha.replace("# ", "")}
           </h3>

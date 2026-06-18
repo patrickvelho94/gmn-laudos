@@ -19,7 +19,7 @@ function LaudoContent() {
   const categoria = searchParams.get("categoria") || "Categoria";
   const resultado = searchParams.get("resultado") || "";
   const score = Number(searchParams.get("score")) || 0;
-  const seoScore = Number(searchParams.get("seoScore")) || 0;
+  const visibilidadeScore = Number(searchParams.get("visibilidadeScore")) || 0;
   const avaliacaoScore = Number(searchParams.get("avaliacaoScore")) || 0;
   const engajamentoScore = Number(searchParams.get("engajamentoScore")) || 0;
   const perfilScore = Number(searchParams.get("perfilScore")) || 0;
@@ -35,7 +35,7 @@ function LaudoContent() {
     cidade,
     categoria,
     score,
-    seoScore,
+    visibilidadeScore,
     avaliacaoScore,
     engajamentoScore,
     perfilScore,
@@ -132,7 +132,7 @@ function LaudoContent() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 mt-10">
                 {[
-                  { label: "SEO LOCAL", value: seoScore },
+                  { label: "VISIBILIDADE", value: visibilidadeScore },
                   { label: "AVALIAÇÕES", value: avaliacaoScore },
                   { label: "ENGAJAMENTO", value: engajamentoScore },
                   { label: "PERFIL", value: perfilScore },

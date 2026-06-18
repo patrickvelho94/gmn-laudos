@@ -15,48 +15,46 @@ export default function Home() {
   const pdfRef = useRef<HTMLDivElement>(null);
 
   const [checks, setChecks] = useState({
-    apareceGoogle: false,
-    apareceTop10: false,
-    keywordsPrincipais: false,
+  // VISIBILIDADE
+  apareceGoogle: false,
+  apareceNoMaps: false,
+  entreTresPrimeiros: false,
+  // PERFIL
+  descricaoOtimizada: false,
+  categoriasCorretas: false,
+  botaoWhatsapp: false,
+  horarioPreenchido: false,
+  temProdutosServicos: false,
+  // AVALIAÇÕES
+  maisde30Avaliacoes: false,
+  avaliacoesRecentes: false,
+  respondeAvaliacoes: false,
+  // ATIVIDADE
+  postagensRecentes: false,
+  fotosRecentes: false,
+  temVideos: false,
+});
 
-    descricaoOtimizada: false,
-    botaoWhatsapp: false,
-    categoriasCorretas: false,
-    horarioPreenchido: false,
-
-    respondeAvaliacoes: false,
-    avaliacoesRecentes: false,
-    quantidadeBoa: false,
-
-    fazPostagens: false,
-    fotosRecentes: false,
-    perfilAtualizado: false,
-
-    usaKeywords: false,
-    cidadeDescricao: false,
-  });
-
-  const pesos = {
-    apareceGoogle: 10,
-    apareceTop10: 20,
-    keywordsPrincipais: 15,
-
-    descricaoOtimizada: 5,
-    botaoWhatsapp: 5,
-    categoriasCorretas: 3,
-    horarioPreenchido: 2,
-
-    respondeAvaliacoes: 10,
-    avaliacoesRecentes: 10,
-    quantidadeBoa: 10,
-
-    fazPostagens: 10,
-    fotosRecentes: 5,
-    perfilAtualizado: 5,
-
-    usaKeywords: 3,
-    cidadeDescricao: 2,
-  };
+const pesos = {
+  // VISIBILIDADE (40pts)
+  apareceGoogle: 5,
+  apareceNoMaps: 15,
+  entreTresPrimeiros: 20,
+  // PERFIL (25pts)
+  descricaoOtimizada: 8,
+  categoriasCorretas: 5,
+  botaoWhatsapp: 5,
+  horarioPreenchido: 3,
+  temProdutosServicos: 4,
+  // AVALIAÇÕES (20pts)
+  maisde30Avaliacoes: 8,
+  avaliacoesRecentes: 7,
+  respondeAvaliacoes: 5,
+  // ATIVIDADE (15pts)
+  postagensRecentes: 6,
+  fotosRecentes: 5,
+  temVideos: 4,
+};
 
   const totalPossivel = Object.values(pesos).reduce(
     (acc, peso) => acc + peso,
@@ -75,54 +73,54 @@ export default function Home() {
   );
 
   const score = Math.round((pontos / totalPossivel) * 100);
-  const seoScore = Math.round(
+
+const visibilidadeScore = Math.round(
   (
-    Number(checks.usaKeywords) +
-    Number(checks.cidadeDescricao) +
-    Number(checks.keywordsPrincipais)
+    Number(checks.apareceGoogle) +
+    Number(checks.apareceNoMaps) +
+    Number(checks.entreTresPrimeiros)
   ) / 3 * 100
 );
 
 const avaliacaoScore = Math.round(
   (
-    Number(checks.respondeAvaliacoes) +
+    Number(checks.maisde30Avaliacoes) +
     Number(checks.avaliacoesRecentes) +
-    Number(checks.quantidadeBoa)
+    Number(checks.respondeAvaliacoes)
   ) / 3 * 100
 );
 
 const engajamentoScore = Math.round(
   (
-    Number(checks.fazPostagens) +
+    Number(checks.postagensRecentes) +
     Number(checks.fotosRecentes) +
-    Number(checks.perfilAtualizado)
+    Number(checks.temVideos)
   ) / 3 * 100
 );
 
 const perfilScore = Math.round(
   (
     Number(checks.descricaoOtimizada) +
-    Number(checks.botaoWhatsapp) +
     Number(checks.categoriasCorretas) +
-    Number(checks.horarioPreenchido)
-  ) / 4 * 100
+    Number(checks.botaoWhatsapp) +
+    Number(checks.horarioPreenchido) +
+    Number(checks.temProdutosServicos)
+  ) / 5 * 100
 );
 
-  function getStatus() {
-    if (score <= 40) return "Nível Crítico";
+function getStatus() {
+  if (score <= 40) return "Nível Crítico";
+  if (score <= 70) return "Nível Intermediário";
+  return "Nível Avançado";
+}
 
-    if (score <= 70) return "Nível Intermediário";
+async function baixarPDF() {
+  if (!pdfRef.current) return;
 
-    return "Nível Avançado";
-  }
-
-  async function baixarPDF() {
-    if (!pdfRef.current) return;
-
-    if (!html2pdf) {
-html2pdf = (
-  await import("html2pdf.js/dist/html2pdf.min.js")
-).default;
+  if (!html2pdf) {
+    html2pdf = (
+      await import("html2pdf.js/dist/html2pdf.min.js")
+    ).default;
     }
 
     const options = {
@@ -185,7 +183,7 @@ const auditoria = {
   cidade,
   categoria,
   score,
-  seoScore,
+  visibilidadeScore,
   avaliacaoScore,
   engajamentoScore,
   perfilScore,
@@ -301,160 +299,105 @@ localStorage.setItem(
                 className="w-full bg-black border border-[#3f3f46] rounded-2xl px-6 py-5 outline-none"
               />
 
-              {/* POSICIONAMENTO */}
-              <div className="pt-6">
+              {/* VISIBILIDADE */}
+<div className="pt-6">
+  <h3 className="text-2xl font-bold mb-4">Visibilidade</h3>
+  <div className="space-y-3">
+    <Checkbox
+      label="Aparece no Google quando pesquiso o nome da empresa"
+      checked={checks.apareceGoogle}
+      onClick={() => toggleCheck("apareceGoogle")}
+    />
+    <Checkbox
+      label="Aparece no Maps quando pesquiso a categoria + cidade"
+      checked={checks.apareceNoMaps}
+      onClick={() => toggleCheck("apareceNoMaps")}
+    />
+    <Checkbox
+      label="Está entre os 3 primeiros do Maps"
+      checked={checks.entreTresPrimeiros}
+      onClick={() => toggleCheck("entreTresPrimeiros")}
+    />
+  </div>
+</div>
 
-                <h3 className="text-2xl font-bold mb-4">
-                  Posicionamento
-                </h3>
+{/* PERFIL */}
+<div className="pt-8">
+  <h3 className="text-2xl font-bold mb-4">Perfil</h3>
+  <div className="space-y-3">
+    <Checkbox
+      label="Tem descrição escrita e otimizada"
+      checked={checks.descricaoOtimizada}
+      onClick={() => toggleCheck("descricaoOtimizada")}
+    />
+    <Checkbox
+      label="Categorias estão corretas e específicas"
+      checked={checks.categoriasCorretas}
+      onClick={() => toggleCheck("categoriasCorretas")}
+    />
+    <Checkbox
+      label="Tem botão do WhatsApp ativo"
+      checked={checks.botaoWhatsapp}
+      onClick={() => toggleCheck("botaoWhatsapp")}
+    />
+    <Checkbox
+      label="Horário preenchido corretamente"
+      checked={checks.horarioPreenchido}
+      onClick={() => toggleCheck("horarioPreenchido")}
+    />
+    <Checkbox
+      label="Tem produtos ou serviços cadastrados"
+      checked={checks.temProdutosServicos}
+      onClick={() => toggleCheck("temProdutosServicos")}
+    />
+  </div>
+</div>
 
-                <div className="space-y-3">
+{/* AVALIAÇÕES */}
+<div className="pt-8">
+  <h3 className="text-2xl font-bold mb-4">Avaliações</h3>
+  <div className="space-y-3">
+    <Checkbox
+      label="Tem mais de 30 avaliações"
+      checked={checks.maisde30Avaliacoes}
+      onClick={() => toggleCheck("maisde30Avaliacoes")}
+    />
+    <Checkbox
+      label="Tem avaliações nos últimos 30 dias"
+      checked={checks.avaliacoesRecentes}
+      onClick={() => toggleCheck("avaliacoesRecentes")}
+    />
+    <Checkbox
+      label="Responde as avaliações dos clientes"
+      checked={checks.respondeAvaliacoes}
+      onClick={() => toggleCheck("respondeAvaliacoes")}
+    />
+  </div>
+</div>
 
-                  <Checkbox
-                    label="Aparece no Google"
-                    checked={checks.apareceGoogle}
-                    onClick={() => toggleCheck("apareceGoogle")}
-                  />
+{/* ATIVIDADE */}
+<div className="pt-8">
+  <h3 className="text-2xl font-bold mb-4">Atividade</h3>
+  <div className="space-y-3">
+    <Checkbox
+      label="Fez postagem nos últimos 30 dias"
+      checked={checks.postagensRecentes}
+      onClick={() => toggleCheck("postagensRecentes")}
+    />
+    <Checkbox
+      label="Tem fotos dos últimos 3 meses"
+      checked={checks.fotosRecentes}
+      onClick={() => toggleCheck("fotosRecentes")}
+    />
+    <Checkbox
+      label="Tem vídeos no perfil"
+      checked={checks.temVideos}
+      onClick={() => toggleCheck("temVideos")}
+    />
+  </div>
+</div>
 
-                  <Checkbox
-                    label="Aparece no Top 10"
-                    checked={checks.apareceTop10}
-                    onClick={() => toggleCheck("apareceTop10")}
-                  />
 
-                  <Checkbox
-                    label="Aparece nas palavras-chave principais"
-                    checked={checks.keywordsPrincipais}
-                    onClick={() => toggleCheck("keywordsPrincipais")}
-                  />
-
-                </div>
-
-              </div>
-
-              {/* PERFIL */}
-              <div className="pt-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  Perfil
-                </h3>
-
-                <div className="space-y-3">
-
-                  <Checkbox
-                    label="Possui descrição otimizada"
-                    checked={checks.descricaoOtimizada}
-                    onClick={() => toggleCheck("descricaoOtimizada")}
-                  />
-
-                  <Checkbox
-                    label="Possui botão do WhatsApp"
-                    checked={checks.botaoWhatsapp}
-                    onClick={() => toggleCheck("botaoWhatsapp")}
-                  />
-
-                  <Checkbox
-                    label="Categorias estão corretas"
-                    checked={checks.categoriasCorretas}
-                    onClick={() => toggleCheck("categoriasCorretas")}
-                  />
-
-                  <Checkbox
-                    label="Horário preenchido corretamente"
-                    checked={checks.horarioPreenchido}
-                    onClick={() => toggleCheck("horarioPreenchido")}
-                  />
-
-                </div>
-
-              </div>
-
-              {/* AVALIAÇÕES */}
-              <div className="pt-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  Avaliações
-                </h3>
-
-                <div className="space-y-3">
-
-                  <Checkbox
-                    label="Responde avaliações dos clientes"
-                    checked={checks.respondeAvaliacoes}
-                    onClick={() => toggleCheck("respondeAvaliacoes")}
-                  />
-
-                  <Checkbox
-                    label="Possui avaliações recentes"
-                    checked={checks.avaliacoesRecentes}
-                    onClick={() => toggleCheck("avaliacoesRecentes")}
-                  />
-
-                  <Checkbox
-                    label="Quantidade de avaliações é boa"
-                    checked={checks.quantidadeBoa}
-                    onClick={() => toggleCheck("quantidadeBoa")}
-                  />
-
-                </div>
-
-              </div>
-
-              {/* ATIVIDADE */}
-              <div className="pt-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  Atividade
-                </h3>
-
-                <div className="space-y-3">
-
-                  <Checkbox
-                    label="Faz postagens regularmente"
-                    checked={checks.fazPostagens}
-                    onClick={() => toggleCheck("fazPostagens")}
-                  />
-
-                  <Checkbox
-                    label="Possui fotos recentes"
-                    checked={checks.fotosRecentes}
-                    onClick={() => toggleCheck("fotosRecentes")}
-                  />
-
-                  <Checkbox
-                    label="Perfil atualizado regularmente"
-                    checked={checks.perfilAtualizado}
-                    onClick={() => toggleCheck("perfilAtualizado")}
-                  />
-
-                </div>
-
-              </div>
-
-              {/* SEO */}
-              <div className="pt-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  SEO Local
-                </h3>
-
-                <div className="space-y-3">
-
-                  <Checkbox
-                    label="Usa palavras-chave estratégicas"
-                    checked={checks.usaKeywords}
-                    onClick={() => toggleCheck("usaKeywords")}
-                  />
-
-                  <Checkbox
-                    label="Cidade presente na descrição"
-                    checked={checks.cidadeDescricao}
-                    onClick={() => toggleCheck("cidadeDescricao")}
-                  />
-
-                </div>
-
-              </div>
 
               <button
                 onClick={gerarLaudo}
@@ -512,17 +455,16 @@ localStorage.setItem(
   onClick={() => {
 
     const params = new URLSearchParams({
-      empresa,
-      cidade,
-      categoria,
-      score: String(score),
-      resultado,
-
-      seoScore: String(seoScore),
-      avaliacaoScore: String(avaliacaoScore),
-      engajamentoScore: String(engajamentoScore),
-      perfilScore: String(perfilScore),
-    });
+  empresa,
+  cidade,
+  categoria,
+  score: String(score),
+  resultado,
+  visibilidadeScore: String(visibilidadeScore),
+  avaliacaoScore: String(avaliacaoScore),
+  engajamentoScore: String(engajamentoScore),
+  perfilScore: String(perfilScore),
+});
 
     window.open(`/laudo?${params.toString()}`, "_blank");
 

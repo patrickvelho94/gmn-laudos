@@ -337,7 +337,7 @@ interface Props {
   cidade: string;
   categoria: string;
   score: number;
-  seoScore: number;
+  visibilidadeScore: number;
   avaliacaoScore: number;
   engajamentoScore: number;
   perfilScore: number;
@@ -350,7 +350,7 @@ export function LaudoPDF({
   cidade,
   categoria,
   score,
-  seoScore,
+  visibilidadeScore,
   avaliacaoScore,
   engajamentoScore,
   perfilScore,
@@ -448,7 +448,7 @@ export function LaudoPDF({
         </View>
           <View style={s.metricsRow}>
             {[
-              { label: "SEO LOCAL", value: seoScore },
+              { label: "VISIBILIDADE", value: visibilidadeScore },
               { label: "AVALIACOES", value: avaliacaoScore },
               { label: "ENGAJAMENTO", value: engajamentoScore },
               { label: "PERFIL", value: perfilScore },

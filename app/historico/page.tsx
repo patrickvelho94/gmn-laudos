@@ -120,17 +120,17 @@ export default function HistoricoPage() {
                 onClick={() => {
 
                   const params = new URLSearchParams({
-                    empresa: laudo.empresa,
-                    cidade: laudo.cidade,
-                    categoria: laudo.categoria,
-                    score: String(laudo.score),
-                    resultado: laudo.resultado,
+  empresa: laudo.empresa,
+  cidade: laudo.cidade,
+  categoria: laudo.categoria,
+  score: String(laudo.score),
+  resultado: laudo.resultado,
 
-                    seoScore: String(laudo.seoScore),
-                    avaliacaoScore: String(laudo.avaliacaoScore),
-                    engajamentoScore: String(laudo.engajamentoScore),
-                    perfilScore: String(laudo.perfilScore),
-                  });
+  visibilidadeScore: String(laudo.visibilidadeScore),
+  avaliacaoScore: String(laudo.avaliacaoScore),
+  engajamentoScore: String(laudo.engajamentoScore),
+  perfilScore: String(laudo.perfilScore),
+});
 
                   window.open(`/laudo?${params.toString()}`, "_blank");
 

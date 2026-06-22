@@ -34,6 +34,11 @@ REGRAS DE ESCRITA:
 - Nunca comece a análise com "O perfil da empresa..." ou "O perfil do/da [nome]..."
 - Não termine a conclusão com promessas vazias
 - Seja específico para o segmento e cidade da empresa
+- Escreva como um consultor estrategico falando direto com o dono do negocio, nunca como um auditor listando falhas tecnicas
+- Para cada problema, explique: qual o impacto comercial, como isso reduz a geracao de clientes, como concorrentes podem estar se beneficiando dessa falha
+- Evite frases genericas como "o perfil pode melhorar". Prefira frases como "isso pode fazer com que potenciais clientes escolham concorrentes mais ativos" ou "essa falha reduz as oportunidades de contato vindas do Google"
+- O foco de toda a analise deve ser: geracao de clientes, autoridade local, competitividade e crescimento comercial
+- A media de score dos concorrentes locais e 78 pontos. Se o score da empresa estiver abaixo, explique o impacto competitivo dessa diferenca. Se estiver acima, destaque a vantagem competitiva existente
 - Na conclusão "POTENCIAL DE CRESCIMENTO", nunca termine com frases como "É hora de agir", "Aproveite as oportunidades", "Transforme seu perfil" — seja específico sobre o que muda na prática
 - Na "ANALISE DETALHADA", não comece citando o nome da empresa na primeira frase — comece com uma observação sobre o mercado, o score ou a situação
 
@@ -44,30 +49,27 @@ Categoria: ${categoria}
 Score: ${score}/100
 
 CHECKLIST:
-POSICIONAMENTO
-- Aparece no Google: ${checks.apareceGoogle ? "Sim" : "Não"}
-- Aparece no Top 10: ${checks.apareceTop10 ? "Sim" : "Não"}
-- Aparece nas palavras-chave principais: ${checks.keywordsPrincipais ? "Sim" : "Não"}
+VISIBILIDADE
+- Aparece no Google quando pesquisa o nome: ${checks.apareceGoogle ? "Sim" : "Não"}
+- Aparece no Maps quando pesquisa categoria + cidade: ${checks.apareceNoMaps ? "Sim" : "Não"}
+- Esta entre os 3 primeiros do Maps: ${checks.entreTresPrimeiros ? "Sim" : "Não"}
 
 PERFIL
-- Possui descrição otimizada: ${checks.descricaoOtimizada ? "Sim" : "Não"}
-- Possui botão do WhatsApp: ${checks.botaoWhatsapp ? "Sim" : "Não"}
-- Categorias estão corretas: ${checks.categoriasCorretas ? "Sim" : "Não"}
-- Horário preenchido corretamente: ${checks.horarioPreenchido ? "Sim" : "Não"}
+- Possui descricao otimizada: ${checks.descricaoOtimizada ? "Sim" : "Não"}
+- Categorias estao corretas: ${checks.categoriasCorretas ? "Sim" : "Não"}
+- Possui botao do WhatsApp: ${checks.botaoWhatsapp ? "Sim" : "Não"}
+- Horario preenchido corretamente: ${checks.horarioPreenchido ? "Sim" : "Não"}
+- Possui produtos ou servicos cadastrados: ${checks.temProdutosServicos ? "Sim" : "Não"}
 
-AVALIAÇÕES
-- Responde avaliações dos clientes: ${checks.respondeAvaliacoes ? "Sim" : "Não"}
-- Possui avaliações recentes: ${checks.avaliacoesRecentes ? "Sim" : "Não"}
-- Quantidade de avaliações é boa: ${checks.quantidadeBoa ? "Sim" : "Não"}
+AVALIACOES
+- Tem mais de 30 avaliacoes: ${checks.maisde30Avaliacoes ? "Sim" : "Não"}
+- Possui avaliacoes recentes (ultimos 30 dias): ${checks.avaliacoesRecentes ? "Sim" : "Não"}
+- Responde avaliacoes dos clientes: ${checks.respondeAvaliacoes ? "Sim" : "Não"}
 
 ATIVIDADE
-- Faz postagens regularmente: ${checks.fazPostagens ? "Sim" : "Não"}
-- Possui fotos recentes: ${checks.fotosRecentes ? "Sim" : "Não"}
-- Perfil atualizado regularmente: ${checks.perfilAtualizado ? "Sim" : "Não"}
-
-SEO LOCAL
-- Usa palavras-chave estratégicas: ${checks.usaKeywords ? "Sim" : "Não"}
-- Cidade presente na descrição: ${checks.cidadeDescricao ? "Sim" : "Não"}
+- Fez postagem nos ultimos 30 dias: ${checks.postagensRecentes ? "Sim" : "Não"}
+- Possui fotos dos ultimos 3 meses: ${checks.fotosRecentes ? "Sim" : "Não"}
+- Possui videos no perfil: ${checks.temVideos ? "Sim" : "Não"}
 
 ESTRUTURA DO LAUDO — siga exatamente essa ordem e formato:
 
@@ -84,6 +86,10 @@ Use bullets com -
 
 # OPORTUNIDADES DE GANHO RAPIDO
 Mostre ações concretas que podem mudar o cenário em pouco tempo. Seja específico para o segmento e a cidade. Nada genérico.
+Use bullets com -
+
+# OPORTUNIDADES PERDIDAS
+Liste o que a empresa esta deixando de ganhar agora, hoje, por causa dos problemas identificados. Pense em buscas que ela nao aparece, clientes que estao indo para concorrentes, contatos que nao chegam. Seja concreto e use exemplos realistas do segmento e da cidade.
 Use bullets com -
 
 # IMPACTO NO POSICIONAMENTO

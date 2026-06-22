@@ -367,25 +367,28 @@ export function LaudoPDF({
   if (secao.includes("DIAGNOSTICO")) return s.cardVerde;
   if (secao.includes("LIMITANDO")) return s.cardVermelho;
   if (secao.includes("GANHO")) return s.cardAmarelo;
+  if (secao.includes("PERDIDAS")) return s.cardVermelho;
   if (secao.includes("IMPACTO")) return s.cardCinza;
   if (secao.includes("PLANO")) return s.cardAzul;
   if (secao.includes("POTENCIAL")) return s.cardCinza;
   return s.cardCinza;
 }
 
-  function getCardTagColor(secao: string) {
+function getCardTagColor(secao: string) {
   if (secao.includes("DIAGNOSTICO")) return "#166534";
   if (secao.includes("LIMITANDO")) return "#991b1b";
   if (secao.includes("GANHO")) return "#92400e";
+  if (secao.includes("PERDIDAS")) return "#991b1b";
   if (secao.includes("IMPACTO")) return "#3f3f46";
   if (secao.includes("PLANO")) return "#1d4ed8";
   return "#3f3f46";
 }
 
-  function getCardTagLabel(secao: string) {
+function getCardTagLabel(secao: string) {
   if (secao.includes("DIAGNOSTICO")) return "OTIMIZADO";
   if (secao.includes("LIMITANDO")) return "CRITICO";
   if (secao.includes("GANHO")) return "OPORTUNIDADE";
+  if (secao.includes("PERDIDAS")) return "OPORTUNIDADE PERDIDA";
   if (secao.includes("IMPACTO")) return "INFO";
   if (secao.includes("PLANO")) return "PRIORIDADE";
   return "INFO";
